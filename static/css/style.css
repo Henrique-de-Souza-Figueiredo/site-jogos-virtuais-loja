@@ -1,53 +1,164 @@
-body {
-    background-color: #1b2838;
-    color: #c7d5e0;
-    font-family: 'Motiva Sans', Arial, sans-serif;
+
+
+:root {
+   
+    --purple-dark: #2B0A3D;
+    --purple-primary: #5E2B9B;
+    --purple-light: #9C6AD9;
+    --purple-accent: #D8BBFF;
+    --gray-dark: #1F1F1F;
+    --gray-light: #F4F4F4;
+    --text-light: #FFFFFF;
+    --text-dark: #222222;
+}
+
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-    color: #66c0f4;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--gray-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+
+header {
+    background: var(--purple-dark);
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(43, 10, 61, 0.85);
+}
+
+.cabecalho h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    left: 250px;
+    position: absolute;
+}
+
+nav a {
+    color: var(--text-light);
     text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s, color 0.3s;
 }
 
-a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+nav a:hover {
+    background: var(--purple-primary);
+    color: var(--purple-light);
 }
 
-.header {
-    background: linear-gradient(to bottom, #2a475e, #1b2838);
-    padding: 20px;
+
+.videoCabeca {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: fill;
+    display: block;
+}
+
+
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--purple-dark);
     text-align: center;
-    border-bottom: 2px solid #66c0f4;
 }
 
-.button {
-    background-color: #5c7e10;
-    border: none;
-    border-radius: 2px;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
 }
 
-.button:hover {
-    background-color: #6fa31d;
+.destaque {
+    background: var(--purple-accent);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
-.card {
-    background-color: #2a475e;
-    border: 1px solid #66c0f4;
-    border-radius: 4px;
-    padding: 15px;
-    margin: 10px;
-    transition: transform 0.2s ease;
+.destaque:hover {
+    transform: translateY(-5px);
 }
 
-.card:hover {
-    transform: scale(1.02);
+.destaque img {
+    width: 70%;
+    display: block;
+    height: 140px;
+    object-fit: contain;
+    margin: auto;
+    margin-top: 10px;
+    border-radius:50% ;
+}
+
+.destaque h3 {
+    font-size: 1.2rem;
+    margin: 0.8rem 1rem 0.4rem;
+    color: var(--purple-primary);
+}
+
+.destaque p {
+    font-size: 0.9rem;
+    margin: 0 1rem 1rem;
+    color: var(--text-dark);
+}
+
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 0.5rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    .destaque img {
+        height: 120px;
+    }
+}
+
+
+.rodape {
+    background: var(--purple-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.cabecalho img {
+    width: 20%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
+    left: 1px;
+    position: relative;
 }
