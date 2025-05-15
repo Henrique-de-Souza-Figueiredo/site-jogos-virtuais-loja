@@ -264,3 +264,17 @@ main h2 {
 .comprar {
     text-align: center;
 }
+
+.apagar {
+    right: 100px;
+    margin-top:50px ;
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--purple-dark);
+    margin-bottom: 0.5rem;
+}
+
+.apagar:hover {
+    scale: 1.5;
+}
