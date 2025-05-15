@@ -109,9 +109,42 @@ section > div {
 section > div p {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--purple-dark);
     margin-bottom: 0.5rem;
+    
+    animation-name: desconto;
+
+    animation-duration: 2s;
+
+    animation-delay: 0.5s;
+
+           
+    animation-iteration-count: infinite;
+
+           
+    animation-direction: alternate;
 }
+
+@keyframes desconto {
+    0% {
+        color: blue;
+        rotate: 0deg;
+        scale: 1;
+      
+    }
+    50% {
+        color: red;
+        rotate: 30deg;
+        scale: 0.8;
+        
+    }
+    100% {
+        color: green;
+        rotate: -30deg;
+        scale: 1;
+        
+    }
+}
+
 
 section > div h3 {
     font-size: 1.2rem;
@@ -130,21 +163,6 @@ section > div h3:hover {
     color: var(--purple-dark);
 }
 
-@media (max-width: 600px) {
-    .cabecalho {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav a {
-        margin: 0.5rem;
-    }
-    main img {
-        max-width: 90%;
-    }
-    main video {
-        max-height: 240px;
-    }
-}
 
 .rodape {
     background: var(--purple-dark);
