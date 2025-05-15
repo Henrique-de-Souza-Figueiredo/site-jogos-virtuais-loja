@@ -64,17 +64,6 @@ nav a:hover {
     color: var(--purple-light);
 }
 
-
-.videoCabeca {
-    width: 100%;
-    height: auto;
-    max-height: 300px;
-    object-fit: fill;
-    display: block;
-    margin-bottom: 10px;
-}
-
-
 main {
     padding: 2rem;
 }
