@@ -12,19 +12,18 @@
 }
 
 .cabecalho img {
-    width: 20%;
+    width: 100px;
     height: auto;
     max-height: 100px;
     object-fit: contain;
-    display: block;
-    left: 1px;
-    position: relative;
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -38,22 +37,23 @@ header {
     background: var(--purple-dark);
     color: var(--text-light);
     position: relative;
-    overflow: hidden;
 }
 
 .cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
     background: rgba(43, 10, 61, 0.85);
+    position: relative;
+    height: 120px;
+    padding: 1rem 2rem;
 }
+
 
 .cabecalho h1 {
     font-size: 2rem;
     letter-spacing: 2px;
-    left: 250px;
     position: absolute;
+    top: 30px;
+    left: 140px;
+    color: var(--text-light);
 }
 
 nav a {
@@ -186,4 +186,26 @@ section > div h3:hover {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s, color 0.3s;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+.menu a:hover {
+    background: var(--purple-primary);
+    color: var(--purple-light);
 }
