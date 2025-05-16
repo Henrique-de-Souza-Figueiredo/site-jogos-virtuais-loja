@@ -50,7 +50,6 @@ header {
 .cabecalho h1 {
     font-size: 2rem;
     letter-spacing: 2px;
-    position: absolute;
     top: 30px;
     left: 140px;
     color: var(--text-light);
